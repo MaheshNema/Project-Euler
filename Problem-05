@@ -1,0 +1,12 @@
+// problem 05 - Smallest multiple
+/*
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+ */
+
+def divisibleBy(Number:Int):Boolean ={
+  (11 to 20).forall(Number % _ == 0)
+}
+val NaturalNumber = Stream.from(1)
+val answer = NaturalNumber.find(divisibleBy(_))
+println(answer)
