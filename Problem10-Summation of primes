@@ -1,0 +1,17 @@
+/**
+  * Created by Mahesh Nema on 14-01-2017.
+  */
+// Problem 10 - Summation of primes
+/*
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+Find the sum of all the primes below two million.
+ */
+
+object Euler10 extends App {
+
+  def isPrime(num:Long)={
+    (2L until num) forall (n => num % n != 0)
+  }
+  val answer = 2 + (3L to 2000000 by 2).filter(isPrime(_)).sum
+  println(answer)
+}
