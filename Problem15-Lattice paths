@@ -1,0 +1,19 @@
+package ProjectEuler
+
+/**
+  * Created by Mahesh Nema on 19-01-2017.
+  */
+// Probelm 15 Lattice paths
+/*
+Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
+
+How many such routes are there through a 20×20 grid?
+ */
+
+object Euler15 extends App {
+def fact(f:Long):BigInt ={
+  (BigInt(1) to f).product
+}
+  val answer = fact(40)/(fact(20) * fact(20))
+  print(answer)
+}
