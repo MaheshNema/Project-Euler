@@ -1,0 +1,21 @@
+package ProjectEuler
+
+/**
+  * Created by Mahesh Nema on 19-01-2017.
+  */
+// Problem 16 - Power digit sum
+/*
+2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+
+What is the sum of the digits of the number 21000?
+ */
+object Euler16 extends App {
+
+  def mySquare(num:BigInt,power:Int):BigInt = {
+    if ( power > 1 ) mySquare(2 * num , power - 1)
+    else num
+  }
+
+  val ans = mySquare(2,1000).toString.map(_.asDigit).sum
+  println(ans)
+}
